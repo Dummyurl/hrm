@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/backgroud_green"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.uncopt.android.widget.text.justify.JustifiedTextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/date_time"
+            android:paddingBottom="5dp"
+            android:paddingLeft="25dp"
+            android:paddingTop="5dp"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="8dp"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="10dp"
+            android:textStyle="italic" />
+
+    </RelativeLayout>
+
+
+    <com.uncopt.android.widget.text.justify.JustifiedTextView
+        android:id="@+id/descriptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="25dp"
+        android:lineSpacingExtra="2dp"
+        android:autoLink="web"
+        android:paddingTop="5dp"
+        android:textColor="@android:color/white"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backgroud_widget_view">
+
+            <TextView
+                android:id="@+id/tv_leave_balance"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/leave_balance"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_paid_leave_balance"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/tv_leave_balance"
+                android:layout_marginLeft="2dp"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:text="@string/paid_leave_balance"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_pending_leave_balance"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/tv_paid_leave_balance"
+                android:layout_marginLeft="2dp"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:text="@string/pending_paid_leaves"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/relative_date_from"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_date_from"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/date_from"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/edt_date_from"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/tv_date_from"
+                android:background="@drawable/backgroud_edit_text"
+                android:gravity="center_vertical"
+                android:hint="@string/default_text"
+                android:inputType="number"
+                android:lines="1"
+                android:maxLength="10"
+                android:paddingLeft="5dp"
+                android:textColor="@color/text_color_small"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:background="@android:drawable/ic_menu_my_calendar"
+                android:contentDescription="@string/app_name" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/relative_date_to"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_date_to"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/date_to"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/edt_date_to"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/tv_date_to"
+                android:background="@drawable/backgroud_edit_text"
+                android:gravity="center_vertical"
+                android:hint="@string/default_text"
+                android:lines="1"
+                android:maxLength="10"
+                android:paddingLeft="5dp"
+                android:textColor="@color/text_color_small"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:background="@android:drawable/ic_menu_my_calendar"
+                android:contentDescription="@string/app_name" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_duration_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_duration_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/duration_type"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spnr_duration_type"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/tv_duration_type"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/backgroud_edit_text"
+                android:entries="@array/duration_types_array"
+                android:gravity="center_vertical"
+                android:overlapAnchor="false"
+                android:textColor="@color/text_color_small"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp"
+                android:background="@mipmap/ic_arrow_drop_down_black_24dp"
+                android:contentDescription="@string/app_name" />
+
+
+            <Spinner
+                android:id="@+id/spnr_duration_type_second"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/spnr_duration_type"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/backgroud_edit_text"
+                android:entries="@array/duration_types_array_second"
+                android:gravity="center_vertical"
+                android:overlapAnchor="false"
+                android:textColor="@color/text_color_small"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_spnr_drop_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="70dp"
+                android:background="@mipmap/ic_arrow_drop_down_black_24dp"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_working_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_working_days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/working_days"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_working_days_d"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/tv_working_days"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/backgroud_edit_text"
+                android:gravity="center_vertical"
+                android:hint="@string/working_days"
+                android:lines="1"
+                android:paddingLeft="5dp"
+                android:textColor="@color/text_color_small"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/tv_unpaid_leaves_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_working_days_d"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_leave_request_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_unpaid_leaves_count"
+                android:layout_marginRight="10dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/relative_leave_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_leave_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/leave_type"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spnr_leave_type"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/tv_leave_type"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/backgroud_edit_text"
+                android:entries="@array/leave_types_array"
+                android:gravity="center_vertical"
+                android:overlapAnchor="false"
+                android:textColor="@color/text_color_small"
+                android:textSize="15sp" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="28dp"
+                android:background="@mipmap/ic_arrow_drop_down_black_24dp"
+                android:contentDescription="@string/app_name" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="20dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/reason"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_reason"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/tv_reason"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/backgroud_edit_text"
+                android:gravity="center_vertical|top"
+                android:hint="@string/enter_reason"
+                android:padding="5dp"
+                android:textColor="@color/text_color_small"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/relative_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="15dp"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <com.andexert.library.RippleView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rv_centered="true"
+                app:rv_rippleDuration="200"
+                app:rv_zoomDuration="200">
+
+                <Button
+                    android:id="@+id/btn_reset"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/login_active_code_btn_color"
+                    android:enabled="false"
+                    android:text="@string/reset"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+            </com.andexert.library.RippleView>
+
+            <com.andexert.library.RippleView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rv_centered="true"
+                app:rv_rippleDuration="200"
+                app:rv_zoomDuration="200">
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="@string/submit"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    android:visibility="gone" />
+            </com.andexert.library.RippleView>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

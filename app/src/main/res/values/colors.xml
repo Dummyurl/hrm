@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#16a086</color>
+    <color name="colorPrimaryDark">#16a086</color>
+    <color name="colorAccent">#16a086</color>
+    <color name="colorAccent_Two">#3c7177</color>
+    <color name="main_color_grey_600">@color/material_grey_600</color>
+    <color name="main_color_500">@color/colorPrimary</color>
+    <color name="colorwhite">#FFFFFF</color>
+    <color name="colorgreenlight">#9bd5ca</color>
+    <color name="text_color">#383838</color>
+    <color name="text_color_small">#555555</color>
+    <color name="btn_cancel_color">#BD362F</color>
+    <color name="login_active_code_btn_color">#CCCCCC</color>
+    <color name="bg_color">#256170</color>
+
+</resources>
